@@ -1,10 +1,22 @@
 import React from "react";
 
-function Search() {
+function Search({onZipChange, zip, getWeather}) {
+    
+    function handleSubmit(event) {
+        event.preventDefault();
+        getWeather()
+    }
+
     return (
-        <form>
-            <input type="text" placeholder="location..."></input>
-            <button>Search</button>
+        <form onSubmit={handleSubmit}>
+            <input 
+                type="text" 
+                placeholder="location..." 
+                value={zip} 
+                onChange={onZipChange}
+            >
+            </input>
+            <button type="submit">Search</button>
         </form>
     )
 }
