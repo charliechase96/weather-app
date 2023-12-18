@@ -17,7 +17,6 @@ function Weather() {
                 <li>Location: {weatherData.location.name}, {weatherData.location.region}</li>
                 <li>Conditions: {weatherData.current.condition.text}</li>
                 <li>Current Temp: {weatherData.current.temp_f}°F</li>
-                <li>Today's High</li>
                 <li>Humidity: {weatherData.current.humidity}%</li>
                 <li></li>
             </ul> 
