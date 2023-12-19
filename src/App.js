@@ -18,8 +18,10 @@ function getWeatherData() {
 }
 
   return (
-    <div className='app-container'>
-      <h1>Weather By Zip Code</h1>
+    <>
+      <div className='header-container'>
+        <h1>Weather By Zip Code</h1>
+      </div> 
       <div className='display'>
         <Search 
           getWeather={getWeatherData}
@@ -29,7 +31,7 @@ function getWeatherData() {
         />
         <Weather weatherData={weatherData}/>
       </div>
-    </div>
+    </>
   )
 }
 
