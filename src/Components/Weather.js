@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import DayOne from "./DayOne";
 import DayTwo from "./DayTwo";
 import DayThree from "./DayThree";
 
 function Weather({weatherData}) {
+    const [isVisible, setIsVisible] = useState(false);
+
+    function toggleVisibility() {
+        setIsVisible(!isVisible);
+    }
+
     if (!weatherData.current || !weatherData.location) {
         return <div>Search by zip to load weather data!</div>;
     }
@@ -24,11 +30,11 @@ function Weather({weatherData}) {
         </div>
         <div className="three-day">
             <h2 className="three-day-header">3 Day Forecast</h2>
+            <div className="day-container">
                 <DayOne weatherData={weatherData}/>
-            <br/>
                 <DayTwo weatherData={weatherData}/>
-            <br/>
                 <DayThree weatherData={weatherData}/>
+            </div>
         </div>
     </>
     )

@@ -12,7 +12,8 @@ function Search({onZipChange, zip, getWeather, setZip}) {
         <form onSubmit={handleSubmit}>
             <input 
                 type="text" 
-                placeholder="location..." 
+                placeholder="Enter 5-digit zip code..." 
+                maxLength="5"
                 value={zip} 
                 onChange={onZipChange}
             >
