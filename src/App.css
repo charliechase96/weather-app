@@ -1,5 +1,5 @@
 body {
-  background-image: url("https://images.pexels.com/photos/7130472/pexels-photo-7130472.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-image: url("https://images.pexels.com/photos/2086748/pexels-photo-2086748.jpeg?auto=compress&cs=tinysrgb&w=600");
   background-size: cover;
 }
 
@@ -81,4 +81,5 @@ h1 {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  font-size: 3em;
 }
