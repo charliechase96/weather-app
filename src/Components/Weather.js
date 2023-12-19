@@ -11,7 +11,7 @@ function Weather({weatherData}) {
     }
 
     if (!weatherData.current || !weatherData.location) {
-        return <div>Search by zip to load weather data!</div>;
+        return <p>Search by zip to load weather data!</p>;
     }
 
     return (

@@ -95,3 +95,7 @@ h1 {
   width: 40vw;
   margin: auto;
 }
+
+p {
+  font-size: 2em;
+}
