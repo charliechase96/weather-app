@@ -1,5 +1,5 @@
 import './App.css';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Search from './Components/Search';
 import Weather from './Components/Weather';
 
@@ -17,11 +17,16 @@ function getWeatherData() {
     .then(data => setWeatherData(data))
 }
 
+useEffect(() => {
+  console.log(weatherData);
+}, [weatherData]);
+
   return (
     <div className='display'>
       <Search 
         getWeather={getWeatherData}
         zip={zip}
+        setZip={setZip}
         onZipChange={handleZipChange}
       />
       <Weather weatherData={weatherData}/>

@@ -1,10 +1,11 @@
 import React from "react";
 
-function Search({onZipChange, zip, getWeather}) {
+function Search({onZipChange, zip, getWeather, setZip}) {
     
     function handleSubmit(event) {
         event.preventDefault();
         getWeather()
+        setZip("")
     }
 
     return (
