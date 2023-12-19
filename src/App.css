@@ -72,3 +72,13 @@ button {
 ul {
   list-style-type: none;
 }
+
+button.three-day-header {
+  max-width: 200px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

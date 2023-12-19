@@ -18,14 +18,17 @@ function getWeatherData() {
 }
 
   return (
-    <div className='display'>
-      <Search 
-        getWeather={getWeatherData}
-        zip={zip}
-        setZip={setZip}
-        onZipChange={handleZipChange}
-      />
-      <Weather weatherData={weatherData}/>
+    <div className='app-container'>
+      <h1>Weather By Zip Code</h1>
+      <div className='display'>
+        <Search 
+          getWeather={getWeatherData}
+          zip={zip}
+          setZip={setZip}
+          onZipChange={handleZipChange}
+        />
+        <Weather weatherData={weatherData}/>
+      </div>
     </div>
   )
 }
