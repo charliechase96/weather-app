@@ -9,7 +9,8 @@ function Weather({weatherData}) {
     }
 
     return (
-        <div>
+        <>
+        <div className="current">
             <h2>Current Conditions in {weatherData.location.name}, {weatherData.location.region}</h2>
             <ul>
                 <li>Conditions: {weatherData.current.condition.text}</li>
@@ -20,15 +21,16 @@ function Weather({weatherData}) {
                 <li>Wind Gusts: {weatherData.current.gust_mph}mph</li>
                 <li>Rain: {weatherData.current.precip_in} inches</li>
             </ul>
-            <br/>
-            <h2>3 Day Forecast</h2>
+        </div>
+        <div className="three-day">
+            <h2 className="three-day-header">3 Day Forecast</h2>
                 <DayOne weatherData={weatherData}/>
             <br/>
                 <DayTwo weatherData={weatherData}/>
             <br/>
                 <DayThree weatherData={weatherData}/>
         </div>
-        
+    </>
     )
 }
 

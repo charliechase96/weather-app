@@ -1,5 +1,5 @@
 import './App.css';
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Search from './Components/Search';
 import Weather from './Components/Weather';
 
@@ -16,10 +16,6 @@ function getWeatherData() {
     .then(response => response.json())
     .then(data => setWeatherData(data))
 }
-
-useEffect(() => {
-  console.log(weatherData);
-}, [weatherData]);
 
   return (
     <div className='display'>

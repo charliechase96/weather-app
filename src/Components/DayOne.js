@@ -2,7 +2,7 @@ import React from "react";
 
 function DayOne({weatherData}) {
     return (
-        <div>
+        <div className="day1">
             <h3>Date: {weatherData.forecast.forecastday[0].date}</h3>
             <ul>
                 <li>Max. Temp: {weatherData.forecast.forecastday[0].day.maxtemp_f}°F</li>
@@ -14,7 +14,6 @@ function DayOne({weatherData}) {
                 <li>Chance of Rain: {weatherData.forecast.forecastday[0].day.daily_chance_of_rain}%</li>
                 <li>Chance of Snow: {weatherData.forecast.forecastday[0].day.daily_chance_of_snow}%</li>
             </ul>
-            
         </div>
     )
 }
