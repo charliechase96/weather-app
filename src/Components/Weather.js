@@ -29,12 +29,20 @@ function Weather({weatherData}) {
             </ul>
         </div>
         <div className="three-day">
-            <h2 className="three-day-header">3 Day Forecast</h2>
-            <div className="day-container">
-                <DayOne weatherData={weatherData}/>
-                <DayTwo weatherData={weatherData}/>
-                <DayThree weatherData={weatherData}/>
-            </div>
+
+            <button 
+                className="three-day-header" 
+                onClick={toggleVisibility}
+            >
+                3 Day Forecast
+            </button>
+
+            {isVisible ? <div className="day-container">
+                            <DayOne weatherData={weatherData}/>
+                            <DayTwo weatherData={weatherData}/>
+                            <DayThree weatherData={weatherData}/>
+                        </div> : null}
+            
         </div>
     </>
     )
