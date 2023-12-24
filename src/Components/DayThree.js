@@ -2,7 +2,7 @@ import React from "react";
 
 function DayThree({weatherData}) {
     return (
-        <div className="day2">
+        <div className="day3">
             <h3>Date: {weatherData.forecast.forecastday[2].date}</h3>
             <ul>
                 <li>Max. Temp: {weatherData.forecast.forecastday[2].day.maxtemp_f}°F</li>
