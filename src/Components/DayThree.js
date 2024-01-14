@@ -3,16 +3,14 @@ import React from "react";
 function DayThree({weatherData}) {
     return (
         <div className="day3">
-            <h3>Date: {weatherData.forecast.forecastday[2].date}</h3>
+            <h3>Date: {weatherData.days[2].datetime}</h3>
             <ul>
-                <li>Max. Temp: {weatherData.forecast.forecastday[2].day.maxtemp_f}°F</li>
-                <li>Min. Temp: {weatherData.forecast.forecastday[2].day.mintemp_f}°F</li>
-                <li>Conditions: {weatherData.forecast.forecastday[2].day.condition.text}</li>
-                <li>Avg. Humidity: {weatherData.forecast.forecastday[2].day.avghumidity}%</li>
-                <li>AQI: {weatherData.forecast.forecastday[2].day.air_quality.no2}</li>
-                <li>Max. Winds: {weatherData.forecast.forecastday[2].day.maxwind_mph}mph</li>
-                <li>Chance of Rain: {weatherData.forecast.forecastday[2].day.daily_chance_of_rain}%</li>
-                <li>Chance of Snow: {weatherData.forecast.forecastday[2].day.daily_chance_of_snow}%</li>
+                <li>Max. Temp: {weatherData.days[2].tempmax}°F</li>
+                <li>Min. Temp: {weatherData.days[2].tempmin}°F</li>
+                <li>Conditions: {weatherData.days[2].conditions}</li>
+                <li>Avg. Humidity: {weatherData.days[2].humidity}%</li>
+                <li>Winds: {weatherData.days[2].windspeed}mph</li>
+                <li>Chance of Rain: {weatherData.days[2].precipprob}%</li>
             </ul>
         </div>
     )

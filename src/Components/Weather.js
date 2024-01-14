@@ -10,22 +10,21 @@ function Weather({weatherData}) {
         setIsVisible(!isVisible);
     }
 
-    if (!weatherData.current || !weatherData.location) {
+    if (!weatherData.address) {
         return <p>Search by zip to load weather data!</p>;
     }
 
     return (
         <>
         <div className="current">
-            <h2>Current Conditions in {weatherData.location.name}, {weatherData.location.region}</h2>
+            <h2>Current Conditions in {weatherData.address}</h2>
             <ul>
-                <li>Conditions: {weatherData.current.condition.text}</li>
-                <li>Current Temp: {weatherData.current.temp_f}°F</li>
-                <li>Humidity: {weatherData.current.humidity}%</li>
-                <li>AQI: {weatherData.current.air_quality.no2}</li>
-                <li>Wind: {weatherData.current.wind_mph}mph</li>
-                <li>Wind Gusts: {weatherData.current.gust_mph}mph</li>
-                <li>Rain: {weatherData.current.precip_in} inches</li>
+                <li>Conditions: {weatherData.currentConditions.conditions}</li>
+                <li>Current Temp: {weatherData.currentConditions.temp}°F</li>
+                <li>Humidity: {weatherData.currentConditions.humidity}%</li>
+                <li>Wind: {weatherData.currentConditions.windspeed}mph</li>
+                <li>Wind Gusts: {weatherData.currentConditions.windgust}mph</li>
+                <li>Rain: {weatherData.currentConditions.precip} inches</li>
             </ul>
         </div>
         <div className="three-day">

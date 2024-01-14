@@ -11,10 +11,15 @@ function handleZipChange(event) {
     setZip(event.target.value)
 }
 
+
+
 function getWeatherData() {
-    fetch(`https://api.weatherapi.com/v1/forecast.json?key=9ffefacc209c4dc9803111103231912&q=${zip}&days=3&aqi=yes&alerts=no`)
+    fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${zip}?unitGroup=us&key=MQ5YX7F7Z9J6MRVCBPD95CX2L&contentType=json`)
     .then(response => response.json())
-    .then(data => setWeatherData(data))
+    .then(data => {
+      setWeatherData(data)
+      console.log(data)
+    })
 }
 
   return (
