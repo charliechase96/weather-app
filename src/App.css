@@ -111,8 +111,8 @@ p {
   align-items: center;
   background-color: rgba(255, 255, 255, 0.3);
   padding: 20px;
-  border-radius: 15px;
-  width: 40%;
+  border-radius: 10px;
+  width: 100%;
   margin: auto;
   margin-bottom: 50px;
 }
