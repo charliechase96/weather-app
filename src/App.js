@@ -37,7 +37,7 @@ function getWeatherData() {
         <Weather weatherData={weatherData}/>
       </div>
       <div className='footer'>
-        <img src="https://i.imgur.com/EULjniJ.png" alt="Charlie Chase Productions Logo"/>
+        <img src="https://i.imgur.com/yt7qhEs.png" alt="Charlie Chase Productions Logo"/>
       </div>
     </>
   )
